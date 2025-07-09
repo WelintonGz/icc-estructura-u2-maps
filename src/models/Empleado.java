@@ -13,9 +13,13 @@ public class Empleado implements Comparable<Empleado>{
         this.position = position;
     }
 
+    public Empleado(int id2) {
+        //TODO Auto-generated constructor stub
+    }
+
     @Override
     public int hashCode(){
-        return id + name.hashCode();
+        return id;
     }
     @Override
     public boolean equals(Object obj){
@@ -26,7 +30,7 @@ public class Empleado implements Comparable<Empleado>{
             return false;
         }
         Empleado otraPersona = (Empleado) obj;
-        return Objects.equals(name, otraPersona.name) && id == otraPersona.id;
+        return id == otraPersona.id;
     }
 
     public int getId() {
